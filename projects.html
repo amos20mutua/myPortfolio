@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mutua Amos - Portfolio</title>
+    <title data-translate="projectsPageTitle">My Projects - Mutua Amos</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -18,12 +18,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation with language selector -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Mutua Amos</a>
-            <div class="ms-auto d-flex align-items-center">
-                <select class="form-select language-selector" id="languageSelector">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo-container me-2">
+                    <div class="logo">
+                        <span class="logo-text">MA</span>
+                    </div>
+                </div>
+                <span data-translate="name">Mutua Amos</span>
+            </a>
+            <div class="language-selector">
+                <select id="languageSelector" class="form-select">
                     <option value="en">English</option>
                     <option value="sw">Swahili</option>
                     <option value="es">Spanish</option>
@@ -32,59 +39,84 @@
         </div>
     </nav>
 
+    <!-- Projects Header -->
+    <header class="projects-header text-center">
+        <h1 data-translate="projectsTitle">My Projects</h1>
+        <p class="lead" data-translate="projectsSubtitle">Showcasing my journey in web development and entrepreneurship</p>
+    </header>
+
     <!-- Projects Section -->
-    <section class="projects-page">
+    <section class="projects-section">
         <div class="container">
-            <div class="page-header" data-aos="fade-up">
-                <h1 class="page-title" data-translate="projectsTitle">My Projects</h1>
-                <p class="page-subtitle" data-translate="projectsSubtitle">Showcasing my journey in web development and entrepreneurship</p>
-            </div>
-            
-            <div class="projects-grid">
-                <!-- AffordablePicks Project -->
-                <div class="project-card-wrapper" data-aos="fade-up">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <div class="logo-container">
-                                <img src="picks.jpg" alt="AffordablePicks Logo" class="project-logo">
-                            </div>
-                            <div class="project-badge" data-translate="featuredProject">Featured Project</div>
+            <!-- Featured Project -->
+            <div class="project-card" data-aos="fade-up">
+                <h2 class="section-title" data-translate="featuredProject">Featured Project</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="picks.jpg" alt="AffordablePicks" class="img-fluid project-image">
+                    </div>
+                    <div class="col-md-6">
+                        <h3 data-translate="affordablePicksTitle">AffordablePicks</h3>
+                        <p data-translate="affordablePicksDesc">E-commerce platform revolutionizing rural commerce through:</p>
+                        <ul>
+                            <li data-translate="feature1">Product sourcing and delivery services</li>
+                            <li data-translate="feature2">Professional representation services</li>
+                            <li data-translate="feature3">Government event representation</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <h4 data-translate="techStack">Technology Stack:</h4>
+                            <span class="badge bg-primary">React</span>
+                            <span class="badge bg-primary">Node.js</span>
+                            <span class="badge bg-primary">MongoDB</span>
+                            <span class="badge bg-primary">AWS</span>
                         </div>
-                        <div class="project-content">
-                            <h3 data-translate="affordablePicksTitle">AffordablePicks</h3>
-                            <p class="project-description" data-translate="affordablePicksDesc">
-                                E-commerce platform revolutionizing rural commerce through:
-                            </p>
-                            <ul class="project-features">
-                                <li data-translate="feature1">Product sourcing and delivery services</li>
-                                <li data-translate="feature2">Professional representation services</li>
-                                <li data-translate="feature3">Government event representation</li>
-                            </ul>
-                            <div class="tech-stack">
-                                <span>React</span>
-                                <span>Node.js</span>
-                                <span>MongoDB</span>
-                                <span>Express</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://affordablepicks.onrender.com" target="_blank" class="btn btn-primary">
-                                    <i class="fas fa-external-link-alt"></i> 
-                                    <span data-translate="viewLive">View Live Site</span>
-                                </a>
-                                <a href="#" target="_blank" class="btn btn-outline-primary">
-                                    <i class="fab fa-github"></i> View Code
-                                </a>
-                            </div>
-                        </div>
+                        <a href="#" class="btn btn-primary mt-3" data-translate="viewLive">View Live Site</a>
+                        <a href="#" class="btn btn-outline-primary mt-3" data-translate="viewCode">View Code</a>
                     </div>
                 </div>
             </div>
 
-            <div class="page-footer" data-aos="fade-up">
-                <a href="contact.html" class="btn btn-primary btn-lg">Let's Work Together</a>
+            <!-- Personal Portfolio -->
+            <div class="project-card" data-aos="fade-up">
+                <h2 class="section-title" data-translate="personalProject">Personal Project</h2>
+                <div class="row">
+                    <div class="col-md-6 order-md-2">
+                        <img src="assets/portfolio.jpg" alt="Portfolio" class="img-fluid project-image">
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <h3 data-translate="portfolioTitle">Personal Portfolio</h3>
+                        <p data-translate="portfolioDesc">Modern and responsive portfolio website featuring:</p>
+                        <ul>
+                            <li data-translate="portfolioFeature1">Multilingual support</li>
+                            <li data-translate="portfolioFeature2">Interactive UI/UX design</li>
+                            <li data-translate="portfolioFeature3">Responsive layout for all devices</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <h4 data-translate="techStackPortfolio">Technology Stack:</h4>
+                            <span class="badge bg-primary">HTML5</span>
+                            <span class="badge bg-primary">CSS3</span>
+                            <span class="badge bg-primary">JavaScript</span>
+                            <span class="badge bg-primary">Bootstrap</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3" data-translate="viewLive">View Live Site</a>
+                        <a href="#" class="btn btn-outline-primary mt-3" data-translate="viewCode">View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="cta-section text-center" data-aos="fade-up">
+                <h2 data-translate="interestedWork">Interested in working together?</h2>
+                <p data-translate="ctaDescription">I'm always open to discussing new projects and creative ideas.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg" data-translate="contactMe">Contact Me</a>
             </div>
         </div>
     </section>
+
+    <!-- Home Button -->
+    <div class="home-button">
+        <a href="index.html" class="btn btn-primary" data-translate="home">Home</a>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -92,5 +124,41 @@
     <script src="script.js"></script>
     <!-- Include language.js before closing body tag -->
     <script src="language.js"></script>
+    <script src="translations.js"></script>
+    <script src="language-manager.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Page loaded, initializing...');
+            
+            // Initialize language manager
+            window.languageManager = new LanguageManager();
+            
+            // Add a click handler to test translation
+            document.getElementById('languageSelector').addEventListener('click', () => {
+                console.log('Current translations:', translations);
+                console.log('Current language:', window.languageManager.currentLanguage);
+            });
+        });
+    </script>
+
+    <!-- Add this button temporarily for testing -->
+    <button onclick="testTranslations()" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+        Test Translations
+    </button>
+
+    <script>
+    function testTranslations() {
+        console.log('Testing translations...');
+        console.log('Current language:', window.languageManager.currentLanguage);
+        console.log('Available translations:', translations);
+        
+        const elements = document.querySelectorAll('[data-translate]');
+        elements.forEach(el => {
+            const key = el.getAttribute('data-translate');
+            console.log(`Element: ${key}, Current text: ${el.textContent}`);
+            console.log(`Expected translation:`, translations[window.languageManager.currentLanguage][key]);
+        });
+    }
+    </script>
 </body>
 </html> 
