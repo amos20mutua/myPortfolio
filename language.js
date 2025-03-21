@@ -11,30 +11,36 @@ const translations = {
         // Projects page
         projectsTitle: "My Projects",
         projectsSubtitle: "Showcasing my journey in web development and entrepreneurship",
+        featuredProject: "Featured Project",
         affordablePicksTitle: "AffordablePicks",
-        affordablePicksDesc: "E-commerce platform revolutionizing rural commerce",
+        affordablePicksDesc: "E-commerce platform revolutionizing rural commerce through:",
+        feature1: "Product sourcing and delivery services",
+        feature2: "Professional representation services",
+        feature3: "Government event representation",
         viewLive: "View Live Site",
         viewCode: "View Code",
         
         // Contact page
         contactTitle: "Let's Connect",
         contactSubtitle: "Open for collaborations and exciting opportunities",
-        partnerships: "Business Partnerships",
+        lookingFor: "Looking for:",
+        businessPartnerships: "Business Partnerships",
         partnershipsDesc: "Join forces with AffordablePicks",
-        development: "Web Development",
+        webDevelopment: "Web Development",
         developmentDesc: "Creating innovative digital solutions",
         networking: "Professional Networking",
         networkingDesc: "Building meaningful connections",
+        connectWithMe: "Connect With Me",
         downloadCV: "Download CV"
     },
     sw: {
-        // Add Swahili translations
+        // Add Swahili translations for all strings
         greeting: "Habari, Mimi ni",
         role: "Mtengenezaji wa Tovuti",
         // ... add all other Swahili translations
     },
     es: {
-        // Add Spanish translations
+        // Add Spanish translations for all strings
         greeting: "Hola, Soy",
         role: "Desarrollador Web",
         // ... add all other Spanish translations
