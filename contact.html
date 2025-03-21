@@ -3,25 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mutua Amos - Portfolio</title>
-    <!-- Bootstrap CSS -->
+    <title>Contact - Mutua Amos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation with language selector -->
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Mutua Amos</a>
+            <a class="navbar-brand" href="index.html" data-translate="name">Mutua Amos</a>
             <div class="ms-auto d-flex align-items-center">
                 <select class="form-select language-selector" id="languageSelector">
                     <option value="en">English</option>
@@ -32,7 +25,6 @@
         </div>
     </nav>
 
-    <!-- Contact Section -->
     <section class="contact-page">
         <div class="container">
             <div class="page-header" data-aos="fade-up">
@@ -40,60 +32,95 @@
                 <p class="page-subtitle" data-translate="contactSubtitle">Open for collaborations and exciting opportunities</p>
             </div>
 
-            <div class="contact-content">
-                <div class="contact-info" data-aos="fade-up">
-                    <div class="info-section">
-                        <h3 data-translate="lookingFor">Looking for:</h3>
-                        <ul class="collaboration-list">
-                            <li>
-                                <i class="fas fa-handshake"></i>
-                                <div class="list-content">
-                                    <h4 data-translate="businessPartnerships">Business Partnerships</h4>
-                                    <p data-translate="partnershipsDesc">Join forces with AffordablePicks</p>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="fas fa-laptop-code"></i>
-                                <div class="list-content">
-                                    <h4 data-translate="webDevelopment">Web Development</h4>
-                                    <p data-translate="developmentDesc">Creating innovative digital solutions</p>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="fas fa-users"></i>
-                                <div class="list-content">
-                                    <h4 data-translate="networking">Professional Networking</h4>
-                                    <p data-translate="networkingDesc">Building meaningful connections</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+            <div class="contact-grid">
+                <div class="contact-info-wrapper" data-aos="fade-right">
+                    <div class="contact-info">
+                        <div class="info-section">
+                            <h3 data-translate="lookingFor">Looking for:</h3>
+                            <ul class="collaboration-list">
+                                <li>
+                                    <i class="fas fa-handshake"></i>
+                                    <div class="list-content">
+                                        <h4 data-translate="businessPartnerships">Business Partnerships</h4>
+                                        <p data-translate="partnershipsDesc">Join forces with AffordablePicks</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-laptop-code"></i>
+                                    <div class="list-content">
+                                        <h4 data-translate="webDevelopment">Web Development</h4>
+                                        <p data-translate="developmentDesc">Creating innovative digital solutions</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-users"></i>
+                                    <div class="list-content">
+                                        <h4 data-translate="networking">Professional Networking</h4>
+                                        <p data-translate="networkingDesc">Building meaningful connections</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
 
-                    <div class="social-section">
-                        <h3 data-translate="connectWithMe">Connect With Me</h3>
-                        <div class="social-icons">
-                            <a href="https://github.com/amos20mutua" target="_blank" title="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://linkedin.com/in/mutua-amos" target="_blank" title="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://instagram.com/influenc7048_" target="_blank" title="Instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
+                        <div class="social-section">
+                            <h3 data-translate="connectWithMe">Connect With Me</h3>
+                            <div class="social-icons">
+                                <a href="https://github.com/amos20mutua" target="_blank" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/amos mutuaamos35 target="_blank" title="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://instagram.com/influence" target="_blank" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
                         </div>
-                        <div class="cv-download">
-                            <a href="assets/Mutua-Amos-CV.pdf" 
-                               download="Mutua-Amos-CV.pdf" 
-                               class="btn btn-cv" 
-                               data-translate="downloadCV">
-                                <i class="fas fa-download"></i> Download CV
-                            </a>
+
+                        <div class="contact-details">
+                            <h3 data-translate="directContact">Direct Contact</h3>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:your.mutuaamos35@gmail.com" data-translate="emailAddress">mutuaamos35@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+254105255479" data-translate="phoneNumber">+254 105 255 479</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span data-translate="location">Nairobi, Kenya</span>
+                            </div>
                         </div>
-                        <div class="cv-preview">
-                            <button class="btn btn-outline-primary btn-preview" onclick="previewCV()">
-                                <i class="fas fa-eye"></i> Preview CV
-                            </button>
+
+                        <div class="cv-section">
+                            <h3 data-translate="cvTitle">My CV</h3>
+                            <p data-translate="cvDescription">View or download my professional CV</p>
+                            <div class="cv-buttons">
+                                <a href="cv.html" class="btn btn-primary me-2" data-translate="viewCV">
+                                    <i class="fas fa-eye"></i> View CV
+                                </a>
+                                <a href="CV.pdf" class="btn btn-cv" download data-translate="downloadCV">
+                                    <i class="fas fa-download"></i> Download CV
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-message-wrapper" data-aos="fade-left">
+                    <div class="message-box">
+                        <h3 data-translate="sendMessage">Send Me a Message</h3>
+                        <p data-translate="messageIntro">Have a project in mind? Let's discuss how we can work together.</p>
+                        <div class="social-quick-links">
+                            <a href="https://wa.me/254105255479" target="_blank" class="btn btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span data-translate="whatsappMe">WhatsApp Me</span>
+                            </a>
+                            <a href="https://t.me/influencer" target="_blank" class="btn btn-telegram">
+                                <i class="fab fa-telegram"></i>
+                                <span data-translate="telegramMe">Telegram Me</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -101,7 +128,15 @@
         </div>
     </section>
 
-    <!-- Modal for CV preview -->
+    <!-- Home Button -->
+    <div class="home-button">
+        <a href="index.html" class="btn btn-home" title="Back to Home">
+            <i class="fas fa-home"></i>
+            <span data-translate="home">Home</span>
+        </a>
+    </div>
+
+    <!-- CV Preview Modal -->
     <div id="cvModal" class="cv-modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -112,69 +147,28 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
-    <!-- Include language.js before closing body tag -->
-    <script src="language.js"></script>
-    <style>
-    .cv-modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        z-index: 1000;
-    }
-
-    .modal-content {
-        position: relative;
-        width: 90%;
-        height: 90%;
-        margin: 2% auto;
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    #cvPreview {
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
-
-    .close-modal {
-        position: absolute;
-        right: 20px;
-        top: 10px;
-        font-size: 30px;
-        cursor: pointer;
-        color: var(--primary-color);
-    }
-
-    .btn-preview {
-        margin-top: 1rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-    </style>
+    <script src="translations.js"></script>
+    <script src="language-manager.js"></script>
     <script>
-    function previewCV() {
-        document.getElementById('cvModal').style.display = 'block';
-    }
+        document.addEventListener('DOMContentLoaded', () => {
+            window.languageManager = new LanguageManager();
+            AOS.init();
+        });
 
-    // Close modal when clicking the X
-    document.querySelector('.close-modal').onclick = function() {
-        document.getElementById('cvModal').style.display = 'none';
-    }
+        // CV Preview Modal
+        function previewCV() {
+            document.getElementById('cvModal').style.display = 'block';
+        }
 
-    // Close modal when clicking outside
-    window.onclick = function(event) {
-        if (event.target == document.getElementById('cvModal')) {
+        document.querySelector('.close-modal').onclick = function() {
             document.getElementById('cvModal').style.display = 'none';
         }
-    }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('cvModal')) {
+                document.getElementById('cvModal').style.display = 'none';
+            }
+        }
     </script>
 </body>
 </html> 
