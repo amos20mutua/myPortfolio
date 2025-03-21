@@ -47,6 +47,20 @@ document.addEventListener('DOMContentLoaded', function() {
         once: true,
         offset: 100
     });
+
+    const cvButton = document.querySelector('.btn-cv');
+    
+    if (cvButton) {
+        cvButton.addEventListener('click', function(e) {
+            // Add loading state
+            this.classList.add('loading');
+            
+            // Remove loading state after download starts
+            setTimeout(() => {
+                this.classList.remove('loading');
+            }, 1000);
+        });
+    }
 });
 
 function changeLanguage(language) {
