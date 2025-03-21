@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation with language selector -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">Mutua Amos</a>
@@ -36,56 +36,64 @@
     <section class="contact-page">
         <div class="container">
             <div class="page-header" data-aos="fade-up">
-                <h1 class="page-title">Let's Connect</h1>
-                <p class="page-subtitle">Open for collaborations and exciting opportunities</p>
+                <h1 class="page-title" data-translate="contactTitle">Let's Connect</h1>
+                <p class="page-subtitle" data-translate="contactSubtitle">Open for collaborations and exciting opportunities</p>
             </div>
 
             <div class="contact-content">
                 <div class="contact-info" data-aos="fade-up">
                     <div class="info-section">
-                        <h3>Looking for:</h3>
+                        <h3 data-translate="lookingFor">Looking for:</h3>
                         <ul class="collaboration-list">
                             <li>
                                 <i class="fas fa-handshake"></i>
                                 <div class="list-content">
-                                    <h4>Business Partnerships</h4>
-                                    <p>Join forces with AffordablePicks</p>
+                                    <h4 data-translate="businessPartnerships">Business Partnerships</h4>
+                                    <p data-translate="partnershipsDesc">Join forces with AffordablePicks</p>
                                 </div>
                             </li>
                             <li>
                                 <i class="fas fa-laptop-code"></i>
                                 <div class="list-content">
-                                    <h4>Web Development Projects</h4>
-                                    <p>Creating innovative digital solutions</p>
+                                    <h4 data-translate="webDevelopment">Web Development</h4>
+                                    <p data-translate="developmentDesc">Creating innovative digital solutions</p>
                                 </div>
                             </li>
                             <li>
                                 <i class="fas fa-users"></i>
                                 <div class="list-content">
-                                    <h4>Professional Networking</h4>
-                                    <p>Building meaningful connections</p>
+                                    <h4 data-translate="networking">Professional Networking</h4>
+                                    <p data-translate="networkingDesc">Building meaningful connections</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
 
                     <div class="social-section">
-                        <h3>Connect With Me</h3>
+                        <h3 data-translate="connectWithMe">Connect With Me</h3>
                         <div class="social-icons">
-                            <a href="https://github.com/yourusername" target="_blank" title="GitHub">
+                            <a href="https://github.com/amos20mutua" target="_blank" title="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="https://linkedin.com/in/yourusername" target="_blank" title="LinkedIn">
+                            <a href="https://linkedin.com/in/mutua-amos" target="_blank" title="LinkedIn">
                                 <i class="fab fa-linkedin"></i>
                             </a>
-                            <a href="https://instagram.com/yourusername" target="_blank" title="Instagram">
+                            <a href="https://instagram.com/influenc7048_" target="_blank" title="Instagram">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>
                         <div class="cv-download">
-                            <a href="your-cv.pdf" download class="btn btn-outline-primary">
+                            <a href="assets/Mutua-Amos-CV.pdf" 
+                               download="Mutua-Amos-CV.pdf" 
+                               class="btn btn-cv" 
+                               data-translate="downloadCV">
                                 <i class="fas fa-download"></i> Download CV
                             </a>
+                        </div>
+                        <div class="cv-preview">
+                            <button class="btn btn-outline-primary btn-preview" onclick="previewCV()">
+                                <i class="fas fa-eye"></i> Preview CV
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -93,9 +101,80 @@
         </div>
     </section>
 
+    <!-- Modal for CV preview -->
+    <div id="cvModal" class="cv-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <iframe id="cvPreview" src="assets/Mutua-Amos-CV.pdf"></iframe>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+    <!-- Include language.js before closing body tag -->
+    <script src="language.js"></script>
+    <style>
+    .cv-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+    }
+
+    .modal-content {
+        position: relative;
+        width: 90%;
+        height: 90%;
+        margin: 2% auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    #cvPreview {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .close-modal {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        font-size: 30px;
+        cursor: pointer;
+        color: var(--primary-color);
+    }
+
+    .btn-preview {
+        margin-top: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    </style>
+    <script>
+    function previewCV() {
+        document.getElementById('cvModal').style.display = 'block';
+    }
+
+    // Close modal when clicking the X
+    document.querySelector('.close-modal').onclick = function() {
+        document.getElementById('cvModal').style.display = 'none';
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('cvModal')) {
+            document.getElementById('cvModal').style.display = 'none';
+        }
+    }
+    </script>
 </body>
 </html> 
