@@ -55,9 +55,40 @@ body {
     border-color: transparent;
 }
 
+.language-selector:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
 .language-selector option {
     background: white;
     color: var(--primary-color);
+    padding: 0.5rem;
+}
+
+/* Add loading indicator for language change */
+.language-change-active {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.language-change-active::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color);
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    right: 10px;
+    top: calc(50% - 10px);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 /* Hero Section */
@@ -967,4 +998,228 @@ body {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* Add this to your styles.css */
+.language-selector.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Add a subtle transition for language changes */
+[data-translate] {
+    transition: opacity 0.3s ease;
+}
+
+[data-translate].translating {
+    opacity: 0.5;
+}
+
+/* Logo Styles */
+.logo-container {
+    display: inline-block;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo:hover {
+    transform: translateY(-2px);
+}
+
+.logo-text {
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Make logo responsive */
+@media (max-width: 768px) {
+    .logo {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .logo-text {
+        font-size: 1rem;
+    }
+}
+
+/* Optional: Add a subtle animation on page load */
+@keyframes logoAppear {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.logo {
+    animation: logoAppear 0.5s ease-out forwards;
+}
+
+/* Alternative 1: Circular Logo */
+.logo {
+    border-radius: 50%;  /* Makes it circular */
+    background: linear-gradient(45deg, #1e3c72 0%, #2a5298 100%);
+}
+
+/* Alternative 2: Modern Split Design */
+.logo {
+    background: linear-gradient(135deg, #1e3c72 50%, #2a5298 50%);
+    transform: rotate(-5deg);
+}
+
+/* Alternative 3: Bordered Design */
+.logo {
+    border: 2px solid white;
+    background: #1e3c72;
+}
+
+/* Alternative 4: Glassy Effect */
+.logo {
+    background: rgba(30, 60, 114, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* CV Specific Styles */
+.cv-container {
+    max-width: 900px;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.cv-header {
+    border-bottom: 3px solid #1e3c72;
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.cv-section {
+    margin-bottom: 2.5rem;
+}
+
+.cv-section h2 {
+    color: #1e3c72;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.experience-item, .education-item, .project-item {
+    margin-bottom: 1.5rem;
+}
+
+.date {
+    color: #666;
+    font-style: italic;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skill-category li {
+    background: #f8f9fa;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.skill-category li:hover {
+    background: #e9ecef;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cv-container {
+        padding: 1rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* CV Button Styles */
+.cv-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-cv {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-cv:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(30, 60, 114, 0.2);
+    color: white;
+}
+
+.cv-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cv-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-cv {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
 } 
