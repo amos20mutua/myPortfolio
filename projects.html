@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation with language selector -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">Mutua Amos</a>
@@ -36,8 +36,8 @@
     <section class="projects-page">
         <div class="container">
             <div class="page-header" data-aos="fade-up">
-                <h1 class="page-title">My Projects</h1>
-                <p class="page-subtitle">Showcasing my journey in web development and entrepreneurship</p>
+                <h1 class="page-title" data-translate="projectsTitle">My Projects</h1>
+                <p class="page-subtitle" data-translate="projectsSubtitle">Showcasing my journey in web development and entrepreneurship</p>
             </div>
             
             <div class="projects-grid">
@@ -48,17 +48,17 @@
                             <div class="logo-container">
                                 <img src="picks.jpg" alt="AffordablePicks Logo" class="project-logo">
                             </div>
-                            <div class="project-badge">Featured Project</div>
+                            <div class="project-badge" data-translate="featuredProject">Featured Project</div>
                         </div>
                         <div class="project-content">
-                            <h3>AffordablePicks</h3>
-                            <p class="project-description">
+                            <h3 data-translate="affordablePicksTitle">AffordablePicks</h3>
+                            <p class="project-description" data-translate="affordablePicksDesc">
                                 E-commerce platform revolutionizing rural commerce through:
                             </p>
                             <ul class="project-features">
-                                <li>Product sourcing and delivery services</li>
-                                <li>Professional representation services</li>
-                                <li>Government event representation</li>
+                                <li data-translate="feature1">Product sourcing and delivery services</li>
+                                <li data-translate="feature2">Professional representation services</li>
+                                <li data-translate="feature3">Government event representation</li>
                             </ul>
                             <div class="tech-stack">
                                 <span>React</span>
@@ -68,7 +68,8 @@
                             </div>
                             <div class="project-links">
                                 <a href="https://affordablepicks.onrender.com" target="_blank" class="btn btn-primary">
-                                    <i class="fas fa-external-link-alt"></i> View Live Site
+                                    <i class="fas fa-external-link-alt"></i> 
+                                    <span data-translate="viewLive">View Live Site</span>
                                 </a>
                                 <a href="#" target="_blank" class="btn btn-outline-primary">
                                     <i class="fab fa-github"></i> View Code
@@ -89,5 +90,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+    <!-- Include language.js before closing body tag -->
+    <script src="language.js"></script>
 </body>
 </html> 
