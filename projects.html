@@ -3,119 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-translate="projectsPageTitle">My Projects - Mutua Amos</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <title>Wellbeing Chatbot</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f6f8ff;
+            color: #333;
+        }
+
+        /* Project Card */
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin: 30px;
+            padding: 30px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #3c4a63;
+        }
+
+        /* Image Styling */
+        .project-image {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Chatbot Content */
+        .chatbot-content {
+            padding: 20px;
+        }
+
+        .chatbot-content h3 {
+            font-size: 1.8rem;
+            color: #4b5563;
+            margin-bottom: 10px;
+        }
+
+        .chatbot-content p {
+            font-size: 1.1rem;
+            color: #4b5563;
+        }
+
+        /* Technology Stack */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 20px 0;
+        }
+
+        .tech-stack span {
+            background: #4caf50;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .whatsapp-button h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #3c4a63;
+        }
+
+        .whatsapp-button p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .whatsapp-button a {
+            text-decoration: none;
+            background-color: #25d366;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px 30px;
+            border-radius: 25px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .whatsapp-button a:hover {
+            background-color: #128c7e;
+        }
+
+        .whatsapp-button i {
+            font-size: 1.5rem;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <div class="logo-container me-2">
-                    <div class="logo">
-                        <span class="logo-text">MA</span>
-                    </div>
-                </div>
-                <span data-translate="name">Mutua Amos</span>
-            </a>
-            <div class="language-selector">
-                <select id="languageSelector" class="form-select">
-                    <option value="en">English</option>
-                    <option value="sw">Swahili</option>
-                    <option value="es">Spanish</option>
-                </select>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Projects Header -->
-    <header class="projects-header text-center">
-        <h1 data-translate="projectsTitle">My Projects</h1>
-        <p class="lead" data-translate="projectsSubtitle">Showcasing my journey in web development and entrepreneurship</p>
-    </header>
+    <!-- Wellbeing Chatbot Section -->
+    <div class="project-card">
+        <h2 class="section-title">Wellbeing Chatbot</h2>
+        <div class="chatbot-content">
+            <h3>Multilingual Wellbeing Chatbot</h3>
+            <p>An AI-powered chatbot offering mental health support with:</p>
+            <ul>
+                <li>Multilingual conversation support</li>
+                <li>Personalized wellbeing suggestions</li>
+                <li>24/7 availability</li>
+            </ul>
 
-    <!-- Projects Section -->
-    <section class="projects-section">
-        <div class="container">
-            <!-- Featured Project -->
-            <div class="project-card" data-aos="fade-up">
-                <h2 class="section-title" data-translate="featuredProject">Featured Project</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="picks.jpg" alt="AffordablePicks" class="img-fluid project-image">
-                    </div>
-                    <div class="col-md-6">
-                        <h3 data-translate="affordablePicksTitle">AffordablePicks</h3>
-                        <p data-translate="affordablePicksDesc">E-commerce platform revolutionizing rural commerce through:</p>
-                        <ul>
-                            <li data-translate="feature1">Product sourcing and delivery services</li>
-                            <li data-translate="feature2">Professional representation services</li>
-                            <li data-translate="feature3">Government event representation</li>
-                        </ul>
-                        <div class="tech-stack">
-                            <h4 data-translate="techStack">Technology Stack:</h4>
-                            <span class="badge bg-primary">React</span>
-                            <span class="badge bg-primary">Node.js</span>
-                            <span class="badge bg-primary">MongoDB</span>
-                            <span class="badge bg-primary">AWS</span>
-                        </div>
-                        <a href="#" class="btn btn-primary mt-3" data-translate="viewLive">View Live Site</a>
-                        <a href="#" class="btn btn-outline-primary mt-3" data-translate="viewCode">View Code</a>
-                    </div>
-                </div>
+            <div class="tech-stack">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>Twilio API</span>
+                <span>Google Cloud</span>
             </div>
-<!-- Wellbeing Chatbot Section -->
-<div class="container">
-    <div class="project-card" data-aos="fade-up">
-        <h2 class="section-title" data-translate="wellbeingChatbot">Wellbeing Chatbot</h2>
-        <div class="row">
-            <div class="col-md-6 order-md-2">
-                <img src="assets/chatbot.jpg" alt="Wellbeing Chatbot" class="img-fluid project-image">
-            </div>
-            <div class="col-md-6 order-md-1">
-                <h3 data-translate="chatbotTitle">Multilingual Wellbeing Chatbot</h3>
-                <p data-translate="chatbotDesc">An AI-powered chatbot offering mental health support with:</p>
-                <ul>
-                    <li data-translate="chatbotFeature1">Multilingual conversation support</li>
-                    <li data-translate="chatbotFeature2">Personalized wellbeing suggestions</li>
-                    <li data-translate="chatbotFeature3">24/7 availability</li>
-                </ul>
-                <div class="tech-stack">
-                    <h4 data-translate="techStackChatbot">Technology Stack:</h4>
-                    <span class="badge bg-primary">Python</span>
-                    <span class="badge bg-primary">Flask</span>
-                    <span class="badge bg-primary">Twilio API</span>
-                    <span class="badge bg-primary">Google Cloud</span>
-                </div>
-                <a href="#" class="btn btn-primary mt-3" data-translate="tryChatbot">Try Chatbot</a>
-            </div>
+
+            <a href="#" class="btn btn-primary">Try Chatbot</a>
         </div>
     </div>
 
     <!-- WhatsApp Access Button -->
-    <div class="whatsapp-button text-center" data-aos="fade-up">
-        <h3 data-translate="chatWithBot">Chat with the Wellbeing Bot on WhatsApp</h3>
-        <p data-translate="whatsappDesc">Get instant responses and wellbeing support through WhatsApp.</p>
-        <a href="https://wa.me/254712345678" target="_blank" class="btn btn-success btn-lg">
+    <div class="whatsapp-button">
+        <h3>Chat with the Wellbeing Bot on WhatsApp</h3>
+        <p>Get instant responses and wellbeing support through WhatsApp.</p>
+        <a href="https://wa.me/254712345678" target="_blank">
             <i class="fab fa-whatsapp"></i> Chat on WhatsApp
         </a>
     </div>
-</div>
 
-<!-- Add this script before closing </body> -->
-<script>
-    AOS.init();
-</script>
-
-
+</body>
+</html>
