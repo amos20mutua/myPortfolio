@@ -3,151 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellbeing Chatbot</title>
-    <style>
-        /* General Page Styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f6f8ff;
-            color: #333;
-        }
-
-        /* Project Card */
-        .project-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            margin: 30px;
-            padding: 30px;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Section Title */
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #3c4a63;
-        }
-
-        /* Image Styling */
-        .project-image {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        /* Chatbot Content */
-        .chatbot-content {
-            padding: 20px;
-        }
-
-        .chatbot-content h3 {
-            font-size: 1.8rem;
-            color: #4b5563;
-            margin-bottom: 10px;
-        }
-
-        .chatbot-content p {
-            font-size: 1.1rem;
-            color: #4b5563;
-        }
-
-        /* Technology Stack */
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 20px 0;
-        }
-
-        .tech-stack span {
-            background: #4caf50;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 15px;
-            font-size: 0.9rem;
-        }
-
-        /* WhatsApp Button */
-        .whatsapp-button {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .whatsapp-button h3 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            color: #3c4a63;
-        }
-
-        .whatsapp-button p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-        }
-
-        .whatsapp-button a {
-            text-decoration: none;
-            background-color: #25d366;
-            color: white;
-            font-size: 1.2rem;
-            padding: 10px 30px;
-            border-radius: 25px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .whatsapp-button a:hover {
-            background-color: #128c7e;
-        }
-
-        .whatsapp-button i {
-            font-size: 1.5rem;
-        }
-    </style>
+    <title data-translate="projectsPageTitle">My Projects - Mutua Amos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo-container me-2">
+                    <div class="logo">
+                        <span class="logo-text">MA</span>
+                    </div>
+                </div>
+                <span data-translate="name">Mutua Amos</span>
+            </a>
+            <div class="language-selector">
+                <select id="languageSelector" class="form-select">
+                    <option value="en">English</option>
+                    <option value="sw">Swahili</option>
+                    <option value="es">Spanish</option>
+                </select>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Wellbeing Chatbot Section -->
-    <div class="project-card">
-        <h2 class="section-title">Wellbeing Chatbot</h2>
-        <div class="chatbot-content">
-            <h3>Multilingual Wellbeing Chatbot</h3>
-            <p>An AI-powered chatbot offering mental health support with:</p>
-            <ul>
-                <li>Multilingual conversation support</li>
-                <li>Personalized wellbeing suggestions</li>
-                <li>24/7 availability</li>
-            </ul>
+    <!-- Projects Header -->
+    <header class="projects-header text-center">
+        <h1 data-translate="projectsTitle">My Projects</h1>
+        <p class="lead" data-translate="projectsSubtitle">Showcasing my journey in web development and entrepreneurship</p>
+    </header>
 
-            <div class="tech-stack">
-                <span>Python</span>
-                <span>Flask</span>
-                <span>Twilio API</span>
-                <span>Google Cloud</span>
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <!-- AffordablePicks Project -->
+            <div class="project-card" data-aos="fade-up">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="project-image-wrapper" style="background: #f8f9fa;">
+                            <img src="picks.jpg" alt="AffordablePicks" class="project-image">
+                            <div class="project-overlay">
+                                <a href="https://affordablepicks.co.ke" target="_blank" class="btn btn-primary">Visit Site</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="project-content">
+                            <h3 class="project-title">AffordablePicks</h3>
+                            <p class="project-subtitle">E-commerce Platform</p>
+                            <div class="project-description">
+                                <p>Revolutionizing rural commerce through:</p>
+                                <ul>
+                                    <li>Product sourcing and delivery services</li>
+                                    <li>Professional representation services</li>
+                                    <li>Government event representation</li>
+                                </ul>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">MongoDB</span>
+                                <span class="tech-badge">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <a href="#" class="btn btn-primary">Try Chatbot</a>
+            <!-- Mental Health Chatbot Project -->
+            <div class="project-card mb-4" data-aos="fade-up">
+                <div class="row g-4 flex-lg-row-reverse">
+                    <div class="col-lg-6">
+                        <div class="project-image-wrapper" style="background: #e0f7fa;">
+                            <img src="bot.jpg" alt="Mental Health Chatbot" class="project-image">
+                            <div class="project-overlay">
+                                <a href="https://wa.me/254784122210" target="_blank" class="btn btn-success">Try on WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="project-content">
+                            <h3 class="project-title">Mental Health Chatbot</h3>
+                            <p class="project-subtitle">WhatsApp AI Support</p>
+                            <div class="project-description">
+                                <p>This AI-powered chatbot offers confidential mental health support directly through WhatsApp. Users can:</p>
+                                <ul>
+                                    <li>Chat 24/7 for emotional support</li>
+                                    <li>Receive resource recommendations</li>
+                                    <li>Access self-help tools and tips</li>
+                                </ul>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-badge" style="background:#43d8c9;">WhatsApp API</span>
+                                <span class="tech-badge" style="background:#43d8c9;">Node.js</span>
+                                <span class="tech-badge" style="background:#43d8c9;">AI Integration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chairman's Jersey Shop Project -->
+            <div class="project-card mb-4" data-aos="fade-up">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="project-image-wrapper" style="background: #f0f4ff;">
+                            <img src="jerseys.jpg" alt="Chairman's Jersey Shop" class="project-image">
+                            <div class="project-overlay">
+                                <a href="https://chairmansj.netlify.app" target="_blank" class="btn btn-info">Visit Site</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="project-content">
+                            <h3 class="project-title">Chairman's Jersey Shop</h3>
+                            <p class="project-subtitle">Sports Jersey E-commerce</p>
+                            <div class="project-description">
+                                <p>An online shop for authentic sports jerseys. Features include:</p>
+                                <ul>
+                                    <li>Modern, mobile-friendly design</li>
+                                    <li>Easy product browsing and ordering</li>
+                                    <li>Secure checkout and payment integration</li>
+                                </ul>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-badge" style="background:#4f8cff;">HTML5</span>
+                                <span class="tech-badge" style="background:#4f8cff;">CSS3</span>
+                                <span class="tech-badge" style="background:#4f8cff;">JavaScript</span>
+                                <span class="tech-badge" style="background:#4f8cff;">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grace & Glory Books Website -->
+            <div class="project-card mb-4" data-aos="fade-up">
+                <div class="row g-4 flex-lg-row-reverse">
+                    <div class="col-lg-6">
+                        <div class="project-image-wrapper" style="background: #fffbe7;">
+                            <img src="grace.jpg" alt="Grace & Glory Books" class="project-image">
+                            <div class="project-overlay">
+                                <a href="https://grace-glory.netlify.app" target="_blank" class="btn btn-warning">Visit Site</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="project-content">
+                            <h3 class="project-title">Grace & Glory Books</h3>
+                            <p class="project-subtitle">Christian Books E-commerce</p>
+                            <div class="project-description">
+                                <p>A curated online bookstore for Christian literature. Highlights:</p>
+                                <ul>
+                                    <li>Wide selection of Christian books</li>
+                                    <li>User-friendly browsing and search</li>
+                                    <li>Simple, secure checkout process</li>
+                                </ul>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-badge" style="background:#ffd966; color:#333;">HTML5</span>
+                                <span class="tech-badge" style="background:#ffd966; color:#333;">CSS3</span>
+                                <span class="tech-badge" style="background:#ffd966; color:#333;">JavaScript</span>
+                                <span class="tech-badge" style="background:#ffd966; color:#333;">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="cta-section text-center" data-aos="fade-up">
+                <h2 data-translate="interestedWork">Interested in working together?</h2>
+                <p data-translate="ctaDescription">I'm always open to discussing new projects and creative ideas.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg" data-translate="contactMe">Contact Me</a>
+            </div>
         </div>
+    </section>
+
+    <!-- Home Button -->
+    <div class="home-button">
+        <a href="index.html" class="btn btn-primary" data-translate="home">Home</a>
     </div>
 
-    <!-- WhatsApp Access Button -->
-    <div class="whatsapp-button">
-        <h3>Chat with the Wellbeing Bot on WhatsApp</h3>
-        <p>Get instant responses and wellbeing support through WhatsApp.</p>
-        <a href="https://wa.me/254784122210" target="_blank">
-            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-        </a>
-    </div>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <!-- Include language.js before closing body tag -->
+    <script src="language.js"></script>
+    <script src="translations.js"></script>
+    <script src="language-manager.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Page loaded, initializing...');
+            
+            // Initialize language manager
+            window.languageManager = new LanguageManager();
+            
+            // Add a click handler to test translation
+            document.getElementById('languageSelector').addEventListener('click', () => {
+                console.log('Current translations:', translations);
+                console.log('Current language:', window.languageManager.currentLanguage);
+            });
+        });
+    </script>
 
+    <!-- Add this button temporarily for testing -->
+    <button onclick="testTranslations()" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+        Test Translations
+    </button>
+
+    <script>
+    function testTranslations() {
+        console.log('Testing translations...');
+        console.log('Current language:', window.languageManager.currentLanguage);
+        console.log('Available translations:', translations);
+        
+        const elements = document.querySelectorAll('[data-translate]');
+        elements.forEach(el => {
+            const key = el.getAttribute('data-translate');
+            console.log(`Element: ${key}, Current text: ${el.textContent}`);
+            console.log(`Expected translation:`, translations[window.languageManager.currentLanguage][key]);
+        });
+    }
+    </script>
 </body>
-</html>
+</html> 
