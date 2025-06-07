@@ -12,57 +12,111 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation - Simplified -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Mutua Amos</a>
-            <div class="ms-auto d-flex align-items-center">
-                <select class="form-select language-selector" id="languageSelector">
-                    <option value="en">English</option>
-                    <option value="sw">Swahili</option>
-                    <option value="es">Spanish</option>
-                </select>
-            </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Go to homepage">
+                <div class="logo-container me-2">
+                    <div class="logo">
+                        <span class="logo-text">MA</span>
+                    </div>
+                </div>
+                <span class="navbar-title" data-translate="name">Mutua Amos</span>
+            </a>
+            <select class="form-select language-selector" id="languageSelector" aria-label="Select language">
+                <option value="en">English</option>
+                <option value="sw">Swahili</option>
+                <option value="es">Spanish</option>
+            </select>
         </div>
     </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-12 hero-text" data-aos="fade-right">
-                    <div class="hero-content-wrapper">
-                        <div class="hero-intro">
-                            <span class="greeting" data-translate="greeting">Hello, I'm</span>
-                            <h1 class="animate__animated animate__fadeInDown">Mutua Amos</h1>
-                        </div>
-                        <div class="role-wrapper animate__animated animate__fadeInUp">
-                            <span class="role-badge" data-translate="role">Web Developer</span>
-                            <span class="role-divider">&</span>
-                            <span class="role-badge">CEO of AffordablePicks</span>
-                        </div>
-                        <p class="hero-description animate__animated animate__fadeInUp" data-translate="description">
-                            Fourth-year BBIT student at KCA University, specializing in web development. 
-                            Founder of AffordablePicks, connecting rural communities with essential products 
-                            and professional representation services.
-                        </p>
-                        <div class="hero-buttons animate__animated animate__fadeInUp">
-                            <a href="projects.html" class="btn btn-primary btn-lg">View Projects</a>
-                            <a href="contact.html" class="btn btn-outline-primary btn-lg">Contact Me</a>
-                        </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section-professional">
+            <!-- SVG abstract shape for depth -->
+            <svg class="hero-bg-svg" width="100%" height="100%" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,400 Q360,300 720,400 T1440,400 V600 H0 Z" fill="#43d8c9" fill-opacity="0.08"/>
+                <circle cx="1200" cy="120" r="180" fill="#21A179" fill-opacity="0.07"/>
+            </svg>
+            <div class="container hero-flex">
+                <!-- Left: Text -->
+                <div class="hero-text-col">
+                    <span class="greeting" data-translate="greeting">Hi, I'm</span>
+                    <h1 class="hero-name d-flex align-items-center" data-translate="name">
+                        Mutua Amos
+                        <span class="ms-3" title="Digital Business Builder" style="font-size:2rem;color:#43d8c9;"><i class="fas fa-briefcase"></i></span>
+                    </h1>
+                    <div class="badge bg-accent mb-2" style="font-size:1.1rem; font-weight:600; color:#fff; background:var(--accent-color); display:inline-block;">Empowering Businesses in the Digital Age</div>
+                    <div class="typed-roles">
+                        <span id="typed-role" data-translate-role="role">Web Developer & Digital Business Builder</span>
+                    </div>
+                    <p class="hero-intro" data-translate="description">
+                        I am a final year BBIT student, Christian, and aspiring netpreneur. My passion is helping businesses and communities thrive by embracing digital transformation, e-commerce, and innovative technology. I build digital solutions that empower entrepreneurs and organizations to succeed in the digital age.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="projects.html" class="btn btn-primary btn-lg" aria-label="View Projects" data-translate="viewProjects">View Projects</a>
+                        <a href="contact.html" class="btn btn-outline-primary btn-lg" aria-label="Contact Me" data-translate="contactMe">Contact Me</a>
+                        <a href="https://affordablepicks.co.ke" target="_blank" class="btn btn-accent btn-lg" aria-label="Visit AffordablePicks website" data-translate="ceoRole">CEO of AffordablePicks</a>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 hero-image-container" data-aos="fade-left">
-                    <div class="image-wrapper">
-                        <img src="plain.png" alt="Mutua Amos" class="profile-image">
+                <!-- Right: Profile Image -->
+                <div class="hero-image-col">
+                    <div class="profile-photo-outer">
+                        <div class="profile-photo-inner">
+                            <img src="plain.png" alt="Portrait of Mutua Amos, web developer and entrepreneur" loading="lazy" style="object-position: center top;">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+        <!-- Professional Details Section -->
+        <section class="professional-details-section py-5" style="background: #f9fafb;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card shadow-sm border-0 p-4">
+                            <h2 class="mb-3" data-translate="professionalDetailsTitle">Professional Details</h2>
+                            <ul class="list-unstyled mb-3">
+                                <li><strong data-translate="titleLabel">Title:</strong> <span data-translate="professionalTitle">Web Developer & Digital Business Builder</span></li>
+                                <li><strong data-translate="educationLabel">Education:</strong> <span data-translate="educationDetail">Final year BBIT student at KCA University</span></li>
+                                <li><strong data-translate="skillsLabel">Key Skills:</strong> <span data-translate="skillsDetail">Web Development, E-commerce, Digital Transformation, Entrepreneurship</span></li>
+                            </ul>
+                            <p class="mb-0" data-translate="professionalSummary">
+                                I specialize in building digital solutions for businesses and communities, focusing on e-commerce, digital transformation, and entrepreneurship. My journey combines technical expertise with a passion for empowering others to succeed in the digital age.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+    <script src="translations.js"></script>
+    <script src="language-manager.js"></script>
+    <script>
+    // Simple typed effect for roles, now using translations
+    const rolesByLang = {
+        en: ["Web Developer", "Digital Business Builder", "Digital Transformation Enthusiast", "E-commerce Innovator", "Christian", "Netpreneur", "Tech Enthusiast"],
+        sw: ["Mtengenezaji wa Tovuti", "Mjenzi wa Biashara Dijitali", "Mpenda Mageuzi ya Kidijitali", "Mbunifu wa E-commerce", "Mkristo", "Mjasiriamali Mtandao", "Mpenzi wa Teknolojia"],
+        es: ["Desarrollador Web", "Constructor de Negocios Digitales", "Entusiasta de la Transformación Digital", "Innovador de Comercio Electrónico", "Cristiano", "Netprendedor", "Entusiasta de la Tecnología"]
+    };
+    function updateTypedRole() {
+        const lang = localStorage.getItem('preferredLanguage') || 'en';
+        const roles = rolesByLang[lang] || rolesByLang['en'];
+        let roleIndex = 0;
+        document.getElementById('typed-role').textContent = roles[roleIndex];
+        setInterval(() => {
+            roleIndex = (roleIndex + 1) % roles.length;
+            document.getElementById('typed-role').textContent = roles[roleIndex];
+        }, 2200);
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        window.languageManager = new LanguageManager();
+        updateTypedRole();
+    });
+    </script>
 </body>
 </html> 
