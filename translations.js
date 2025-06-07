@@ -57,7 +57,29 @@ const translations = {
         downloadCV: "Download CV",
         cvTitle: "My CV",
         cvDescription: "View or download my professional CV",
-        viewCV: "View CV"
+        viewCV: "View CV",
+
+        healthProject: "Health Project",
+        chatbotTitle: "Mental Health Chatbot",
+        chatbotDesc: "WhatsApp-based mental health support chatbot providing:",
+        chatbotFeature1: "24/7 mental health support",
+        chatbotFeature2: "Confidential conversations",
+        chatbotFeature3: "Resource recommendations",
+        tryChatbot: "Try Chatbot",
+        
+        ecommerceProject: "E-commerce Project",
+        jerseyShopTitle: "Chairman's Jersey Shop",
+        jerseyShopDesc: "Modern e-commerce platform for sports jerseys featuring:",
+        jerseyFeature1: "Responsive design",
+        jerseyFeature2: "Secure payment integration",
+        jerseyFeature3: "Product catalog management",
+        
+        booksProject: "Books Project",
+        booksTitle: "Grace & Glory Books",
+        booksDesc: "Christian books e-commerce platform offering:",
+        booksFeature1: "Curated Christian literature",
+        booksFeature2: "User-friendly interface",
+        booksFeature3: "Secure checkout process"
     },
     sw: {
         // Navigation
