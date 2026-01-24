@@ -42,7 +42,7 @@
     <section class="section" style="padding-top:3vw;">
       <div class="projects">
         <a class="project-card" href="https://affordablepicks.co.ke" target="_blank" rel="noopener">
-          <img src="picks.jpg" class="project-img" alt="AffordablePicks">
+          <img src="picks.jpg" class="project-img" alt="AffordablePicks" loading="lazy" decoding="async">
           <div class="project-overlay">
             <div class="project-title" data-i18n="project1">AffordablePicks</div>
             <div class="project-subtitle" data-i18n="project1Subtitle">E-commerce Platform</div>
@@ -55,7 +55,7 @@
           </div>
         </a>
         <a class="project-card" href="https://wa.me/254784122210" target="_blank" rel="noopener">
-          <img src="bot.jpg" class="project-img" alt="Mental Health Chatbot">
+          <img src="bot.jpg" class="project-img" alt="Mental Health Chatbot" loading="lazy" decoding="async">
           <div class="project-overlay">
             <div class="project-title" data-i18n="project2">Mental Health Chatbot</div>
             <div class="project-subtitle" data-i18n="project2Subtitle">WhatsApp AI Support</div>
@@ -67,7 +67,7 @@
           </div>
         </a>
         <a class="project-card" href="https://chairmansj.netlify.app" target="_blank" rel="noopener">
-          <img src="jerseys.jpg" class="project-img" alt="Chairman's Jersey Shop">
+          <img src="jerseys.jpg" class="project-img" alt="Chairman's Jersey Shop" loading="lazy" decoding="async">
           <div class="project-overlay">
             <div class="project-title" data-i18n="project3">Chairman's Jersey Shop</div>
             <div class="project-subtitle" data-i18n="project3Subtitle">Sports Jersey E-commerce</div>
@@ -80,7 +80,7 @@
           </div>
         </a>
         <a class="project-card" href="https://grace-glory.netlify.app" target="_blank" rel="noopener">
-          <img src="grace.jpg" class="project-img" alt="Grace & Glory Books">
+          <img src="grace.jpg" class="project-img" alt="Grace & Glory Books" loading="lazy" decoding="async">
           <div class="project-overlay">
             <div class="project-title" data-i18n="project4">Grace & Glory Books</div>
             <div class="project-subtitle" data-i18n="project4Subtitle">Christian Books E-commerce</div>
@@ -115,8 +115,11 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.38/bundled/lenis.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.7/dist/barba.min.js"></script>
+  <!-- Custom scripts - defer non-critical ones -->
   <script src="/js/lang.js"></script>
-  <script src="/js/main.js"></script>
+  <script src="/js/main.js" defer></script>
+  <script src="/js/animations.js" defer></script>
+  <script src="/js/starfield.js" defer></script>
   <script>
   // Responsive nav toggle
   const navToggle = document.getElementById('navToggle');

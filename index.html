@@ -39,7 +39,20 @@
     <section class="hero emily-hero">
       <div class="hero-inner">
         <div class="hero-text">
-          <h1 class="hero-name" data-i18n="heroHeadline">Hi, I'm Mutua Amos —<br>a Digital Business Builder & Web Developer.</h1>
+          <h1 class="hero-name">
+            Hi, I'm Mutua Amos —<br>
+            <span class="hero-roles-inline">
+              <span class="roles-prefix">a </span>
+              <span class="roles-container">
+                <span class="role-text active" data-role="Lead Web Developer">Lead Web Developer</span>
+                <span class="role-text" data-role="Cloud Practitioner">Cloud Practitioner</span>
+                <span class="role-text" data-role="Digital Business Builder">Digital Business Builder</span>
+                <span class="role-text" data-role="Network Engineer">Network Engineer</span>
+                <span class="role-text" data-role="ICT Support Specialist">ICT Support Specialist</span>
+                <span class="role-text" data-role="Virtual Assistant">Virtual Assistant</span>
+              </span>
+            </span>
+          </h1>
           <p class="hero-intro" data-i18n="heroIntro">I empower brands and communities by combining creativity, e-commerce, and technology to deliver bold, transformative digital experiences.</p>
           <div class="hero-socials">
             <a href="https://x.com/" target="_blank" aria-label="X"><svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path fill="#a259ff" d="M17.53 6.47a.75.75 0 0 0-1.06 0L12 10.94 7.53 6.47a.75.75 0 0 0-1.06 1.06L10.94 12l-4.47 4.47a.75.75 0 1 0 1.06 1.06L12 13.06l4.47 4.47a.75.75 0 0 0 1.06-1.06L13.06 12l4.47-4.47a.75.75 0 0 0 0-1.06z"/></svg></a>
@@ -54,10 +67,42 @@
           <div class="hero-cta" data-i18n="heroCta">Let's build something impactful together.</div>
                 </div>
         <div class="hero-photo-wrap">
-          <img src="plain.png" alt="Mutua Amos" class="hero-photo-glow"/>
+          <img src="plain.png" alt="Mutua Amos" class="hero-photo-glow" loading="eager" decoding="async"/>
                 </div>
             </div>
         </section>
+    <section class="section experience-section">
+      <div class="experience-content">
+        <h2 class="experience-title">What I Offer</h2>
+        <div class="experience-grid">
+          <div class="experience-card">
+            <div class="experience-icon">💼</div>
+            <h3>Digital Business Builder</h3>
+            <p>Creating and scaling digital businesses from concept to market</p>
+          </div>
+          <div class="experience-card">
+            <div class="experience-icon">💻</div>
+            <h3>Web Development</h3>
+            <p>Building modern, responsive web applications and e-commerce platforms</p>
+          </div>
+          <div class="experience-card">
+            <div class="experience-icon">🤝</div>
+            <h3>Virtual Assistance</h3>
+            <p>Providing comprehensive administrative and technical support services</p>
+          </div>
+          <div class="experience-card">
+            <div class="experience-icon">🌐</div>
+            <h3>Network Engineering</h3>
+            <p>Designing, implementing, and maintaining network infrastructure</p>
+          </div>
+          <div class="experience-card">
+            <div class="experience-icon">🛠️</div>
+            <h3>ICT Support</h3>
+            <p>Technical support and IT solutions for organizations. Previously served at State Department, Ministry of Labour and Social Protection</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section contact-cta">
       <div class="cta-content">
         <h2 data-i18n="ctaTitle">Let's work together</h2>
@@ -86,8 +131,12 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.38/bundled/lenis.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.7/dist/barba.min.js"></script>
+  <!-- Custom scripts - defer non-critical ones -->
   <script src="/js/lang.js"></script>
-  <script src="/js/main.js"></script>
+  <script src="/js/main.js" defer></script>
+  <script src="/js/animations.js" defer></script>
+  <script src="/js/starfield.js" defer></script>
+  <script src="/js/role-animation.js" defer></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     <script>
   // Responsive nav toggle

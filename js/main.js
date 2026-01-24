@@ -1,20 +1,5 @@
 // GSAP, Lenis, Barba are loaded via CDN in HTML
-// Custom Cursor
-const cursor = document.createElement('div');
-cursor.className = 'cursor';
-document.body.appendChild(cursor);
-let mouseX = 0, mouseY = 0;
-document.addEventListener('mousemove', e => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-  cursor.style.left = mouseX + 'px';
-  cursor.style.top = mouseY + 'px';
-});
-// Cursor hover effect
-[...document.querySelectorAll('a, button, .project-card')].forEach(el => {
-  el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
-  el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
-});
+// Note: Custom cursor is now handled by animations.js for enhanced functionality
 
 // Hero Animations
 window.addEventListener('DOMContentLoaded', () => {
