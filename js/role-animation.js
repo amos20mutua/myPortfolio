@@ -11,11 +11,10 @@
   class RoleAnimation {
     constructor() {
       this.roles = [
-        'Lead Web Developer',
-        'Software Engineer',
-        'Digital Business Builder',
+        'Web Developer',
+        '💻Business Builder',
         'Network Engineer',
-        'ICT Support Specialist',
+        'ICT Support',
         'Virtual Assistant'
       ];
       this.currentIndex = 0;
