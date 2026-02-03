@@ -12,7 +12,7 @@
     constructor() {
       this.roles = [
         'Web Developer',
-        '💻Business Builder',
+        'Business Builder',
         'Network Engineer',
         'ICT Support',
         'Virtual Assistant'
