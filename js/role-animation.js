@@ -13,7 +13,7 @@
       this.roles = [
         'Web Developer',
         'Business Builder',
-        'Network Engineer',
+        'Network Enginee',
         'ICT Support',
         'Virtual Assistant'
       ];
