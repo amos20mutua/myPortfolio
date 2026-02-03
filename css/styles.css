@@ -783,6 +783,38 @@ body {
   color: #43d8c9;
   text-shadow: 0 0 30px rgba(67, 216, 201, 0.6);
 }
+
+/* Responsive sizing for role animation on small screens */
+@media (max-width: 1024px) {
+  .roles-container {
+    min-width: 250px;
+    height: 1.15em;
+  }
+  .role-text {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 768px) {
+  .roles-container {
+    min-width: 200px;
+    height: 1.1em;
+  }
+  .role-text {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 600px) {
+  .roles-container {
+    min-width: 150px;
+    height: 1em;
+  }
+  .role-text {
+    font-size: 0.7em;
+  }
+}
+
 @media (max-width: 900px) {
   .hero-inner {
     grid-template-columns: 1fr;
